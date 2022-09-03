@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "Classic Fish Game",
-            "content": ". Fish Game . Score: 0 New Game .",
-            "url": "https://b-g101.github.io/BASE/fish_game",
-            "relUrl": "/fish_game",
+            "title": "Snake Game",
+            "content": ". Snake Game . Score: 0 New Game .",
+            "url": "https://b-g101.github.io/BASE/snake_game",
+            "relUrl": "/snake_game",
             "date": " • Sep 2, 2022"
         }
         
