@@ -80,15 +80,11 @@ window.onload = wrap_img;
 <body>
 
 
-
-<button onclick="topFunction()" id="myBtn" title="Go to top">^</button>
-
-
-
 <body>
 <h1> Fish Game </h1>
 
 Score: <div id="score">0</div>
+<button onclick="new_game()" id="reload">New Game</button>
 <canvas id="snakeboard" width="400" height="400"></canvas> <!-- sets up the board/dimension of the board -->
 
 <!--formatting the format and design of the snake  board and the score -->
@@ -96,7 +92,7 @@ Score: <div id="score">0</div>
 <style>
     #snakeboard {
         position: absolute;
-        top: 50%;
+        top: 40%;
         left: 69%;
         transform: translate(-50%, -50%);
     }
@@ -150,7 +146,7 @@ Score: <div id="score">0</div>
         snakeboard_ctx.fillStyle = board_background;
         //  Select the colour for the border of the canvas
         snakeboard_ctx.strokestyle = board_border;
-        // Draw a "filled" rectangle to cover the entire canvas
+        // Draw a "filled" rectangle to cover end entire canvas
         snakeboard_ctx.fillRect(0, 0, snakeboard.width, snakeboard.height);
         // Draw a "border" around the entire canvas
         snakeboard_ctx.strokeRect(0, 0, snakeboard.width, snakeboard.height);
@@ -173,6 +169,10 @@ Score: <div id="score">0</div>
         /*fills in the new part with color + locate the color of the new part to the end of the snake*/
         snakeboard_ctx.strokeRect(snakePart.x, snakePart.y, 10, 10);
         /*draws a border aroudn the new part + locate the border to the end of the snake */
+    }
+    function new_game(){
+        delay(2000);
+        location.reload();
     }
     function has_game_ended() {
         for (let i = 4; i < snake.length; i++) {
