@@ -16,7 +16,7 @@ tags: [javascript, style, controls, timers]
 
 
 <body>
-<h1> Snake Game </h1>
+<h1> Snake Game  </h1>
 
 Score: <div id="score">0</div>
 <button onclick="new_game()" id="reload">New Game</button>
@@ -37,7 +37,7 @@ Score: <div id="score">0</div>
     }
 </style>
 </body>
-<!--code for the actual game-->
+<!--code for the actual game -->
 <script>
     const board_border = 'black'; /*setting up the color of the board and snake*/
     const board_background = "white";
