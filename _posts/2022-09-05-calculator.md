@@ -185,22 +185,22 @@ function calculate (first, second) { // function to calculate the result of the 
             result = first / second;
             break;
         case "√":
-            result = Math.sqrt((first - second + second))
+            result = Math.sqrt((first - second + second));
             break;
         case "3√":
-            result = Math.cbrt((first - second + second))
+            result = Math.cbrt((first - second + second));
             break;
         case "e^":
-            result = Math.exp((first - second + second))
+            result = Math.exp((first - second + second));
             break;
         case "sin":
-            result = Math.sin((first - second + second)) 
+            result = Math.sin((first - second + second));
             break;  
         case "cos":
-            result = Math.cos((first - second + second))   
+            result = Math.cos((first - second + second));  
             break;
         case "tan":
-            result = Math.tan((first - second + second))   
+            result = Math.tan((first - second + second));   
             break;
         default: 
             break;
