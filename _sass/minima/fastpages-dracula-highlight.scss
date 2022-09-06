@@ -6,7 +6,7 @@ $dt-code-cell-background: #323443;
 $dt-gray: #44475a;       // Current Line & Selection
 $dt-gray-light: #f8f8f2; // Foreground
 $dt-blue: #6272a4;       // Comment
-$dt-cyan: #8be9fd;
+$dt-cyan: #afd2d4;
 $dt-green: #50fa7b;
 $dt-orange: #ffb86c;
 $dt-pink: #ff79c6;
@@ -51,7 +51,7 @@ $dt-green-light: rgb(172, 229, 145);
     padding-top:0 !important;
 }
 .input_area pre {
-    border-left: 1px solid lightcoral;
+    border-left: 1px solid #afd2d4;
 }
 .output_area pre {
     border-left: 1px solid grey;
@@ -95,7 +95,7 @@ $dt-green-light: rgb(172, 229, 145);
     .sr,
     .s1,
     .ss {
-         color:rgb(231, 153, 122);
+         color:#afd2d4;
     }
   
     .go {
@@ -132,7 +132,7 @@ $dt-green-light: rgb(172, 229, 145);
  
     .p {
          font-weight: bold;
-         color: rgb(102, 217, 239);
+         color: #afd2d4;
  }
   
     .ge {
