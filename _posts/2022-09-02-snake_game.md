@@ -1,3 +1,6 @@
+
+{% include nav_frontend.html %}
+
 ---
 title: Snake Game
 layout: default  
