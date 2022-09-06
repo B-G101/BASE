@@ -13,6 +13,7 @@ tags: [javascript, style, controls, timers]
 <!-- Hack 2: Add a common math operation that is missing from calculator -->
 <!-- Hack 3: Implement 1 number operation (ie SQRT) -->
 
+
 <!-- Style (CSS) implementation of the calculator. -->
 <style>
 /* class to create the calculator's container; uses CSS grid dsiplay to partition off buttons */
@@ -81,6 +82,7 @@ tags: [javascript, style, controls, timers]
 }
 </style>
 
+<body>
 
 <!-- HTML implementation of the calculator. 
     CSS sets 4 buttons (calculator-button) to a row
@@ -140,6 +142,7 @@ function number (value) { // function to input numbers into the calculator
     }
 }
 
+
 // Operator action
 function operation (choice) { // function to input operations into the calculator
     if (firstNumber == null) { // once the operation is chosen, the displayed number is stored into the variable firstNumber
@@ -191,3 +194,5 @@ function clearCalc () { // clears calculator
     nextReady = true;
 }
 </script>
+
+</body>
