@@ -118,6 +118,8 @@ tags: [javascript, style, controls, timers]
     <div class="calculator-button" onclick="operation('cos')">cos</div>
     <div class="calculator-button" onclick="operation('tan')">tan</div>
     <!--row 6-->
+    <div class="calculator-button" onclick="operation('3√')">3√</div>
+    <div class="calculator-button" onclick="operation('e^')">e^</div>
     <div class="calculator-button" onclick="equals()">=</div>
 
 </div>
@@ -183,11 +185,15 @@ function calculate (first, second) { // function to calculate the result of the 
             result = first / second;
             break;
         case "√":
-            result = Math.sqrt((first - second + second))
+            result = Math.sqrt(first)
+        case "3√":
+            result = Math.cbrt((first - second + second))
+        case "e^":
+            result = Math.exp((first - second + second))
         case "sin":
             result = Math.sin((first - second + second))   
         case "cos":
-            result = Math.cos((first - second + second))   
+            result = Math.cos(first)   
         case "tan":
             result = Math.tan((first - second + second))   
         default: 
