@@ -30,7 +30,7 @@ Score: <div id="score">0</div>
 <style>
     #snakeboard {
         position: absolute;
-        top: 40%;
+        top: 50%;
         left: 69%;
         transform: translate(-50%, -50%);
     }
