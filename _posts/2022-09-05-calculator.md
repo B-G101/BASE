@@ -113,6 +113,7 @@ tags: [javascript, style, controls, timers]
     <div class="calculator-button" onclick="number('.')">.</div>
     <div class="calculator-button" onclick="operation('/')">/</div>
     <!--row 5-->
+    <div class="calculator-button" onclick="operation('√')"></div>
     <div class="calculator-button" onclick="equals()">=</div>
 
 </div>
@@ -177,6 +178,8 @@ function calculate (first, second) { // function to calculate the result of the 
         case "/":
             result = first / second;
             break;
+        case "√":
+            result = Math.sqrt((first - second + second))    
         default: 
             break;
     }
