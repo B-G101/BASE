@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Calculator Starters",
-            "content": "| Overview | Snake Game | 0 1 2 3 + 4 5 6 - 7 8 9 * A/C 0 . / = .",
+            "content": "| Overview | Snake Game | 0 1 2 3 + 4 5 6 - 7 8 9 * A/C 0 . / √ = .",
             "url": "https://b-g101.github.io/BASE/frontend/calculator",
             "relUrl": "/frontend/calculator",
             "date": " • Sep 5, 2022"
