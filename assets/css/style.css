@@ -439,7 +439,7 @@ pre code { font-size: 15px !important; }
 
 .output_area pre, .output_area div { margin-bottom: 1rem !important; margin-top: 0rem !important; padding-bottom: 0 !important; padding-top: 0 !important; }
 
-.input_area pre { border-left: 1px solid lightcoral; }
+.input_area pre { border-left: 1px solid #afd2d4; }
 
 .output_area pre { border-left: 1px solid grey; margin-left: 1rem !important; font-size: 16px; }
 
@@ -450,13 +450,13 @@ pre code { font-size: 15px !important; }
 
 .highlight pre, .highlight code { background: #323443; color: #f8f8f2; font-size: 110%; }
 
-.highlight .hll, .highlight .s, .highlight .sa, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss { color: #e7997a; }
+.highlight .hll, .highlight .s, .highlight .sa, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss { color: #afd2d4; }
 
 .highlight .go { color: #44475a; }
 
 .highlight .err, .highlight .g, .highlight .l, .highlight .n, .highlight .x, .highlight .ge, .highlight .gr, .highlight .gh, .highlight .gi, .highlight .gp, .highlight .gs, .highlight .gu, .highlight .gt, .highlight .ld, .highlight .no, .highlight .nd, .highlight .pi, .highlight .ni, .highlight .ne, .highlight .nn, .highlight .nx, .highlight .py, .highlight .w, .highlight .bp { color: #f8f8f2; background-color: #323443 !important; }
 
-.highlight .p { font-weight: bold; color: #66d9ef; }
+.highlight .p { font-weight: bold; color: #afd2d4; }
 
 .highlight .ge { text-decoration: underline; }
 
@@ -466,7 +466,7 @@ pre code { font-size: 15px !important; }
 
 .highlight .c1 { color: gray; }
 
-.highlight .kd, .highlight .kt, .highlight .nb, .highlight .nl, .highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi, .highlight .vm { color: #8be9fd; }
+.highlight .kd, .highlight .kt, .highlight .nb, .highlight .nl, .highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi, .highlight .vm { color: #afd2d4; }
 
 .highlight .kd, .highlight .nb, .highlight .nl, .highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi, .highlight .vm { font-style: italic; }
 
