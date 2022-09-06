@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Calculator Starters",
-            "content": "| Overview | Calculator | Snake Game | 0 1 2 3 + 4 5 6 - 7 8 9 * A/C 0 . / √ sin cos tan 3√ e^ = .",
+            "content": "| Overview | Calculator | Snake Game | . 0 1 2 3 + 4 5 6 - 7 8 9 * A/C 0 . / √ sin cos tan 3√ e^ =",
             "url": "https://b-g101.github.io/BASE/frontend/calculator",
             "relUrl": "/frontend/calculator",
             "date": " • Sep 5, 2022"
@@ -25,7 +25,7 @@
     
         ,"post2": {
             "title": "Snake Game",
-            "content": "| Overview | Calculator | Snake Game | . Snake Game . Score: 0 New Game . .",
+            "content": "| Overview | Calculator | Snake Game | . . Snake Game . Score: 0 New Game .",
             "url": "https://b-g101.github.io/BASE/frontend/snake_game",
             "relUrl": "/frontend/snake_game",
             "date": " • Sep 2, 2022"
@@ -62,7 +62,7 @@
   
       ,"page2": {
           "title": "Frontend Hacks",
-          "content": "| Overview | Calculator | Snake Game | This is page where we can work on frontend pages like our Snake Game and the Math Class calculator. ## Snake Game - Backend Language: Java - serve as an administrative UI for backend developers - snake game works on the Fastpages due to the GUI built ## Math Calculator - made using the Math class - there are different functions within the math class that produce different outputs - useful for us as we are in school and use calculators for many different things - unique interface with different types of math calculators ## More to Come! .",
+          "content": "| Overview | Calculator | Snake Game | . This is page where we can work on frontend pages like our Snake Game and the Math Class calculator. . Snake Game . Backend Language: Java | serve as an administrative UI for backend developers | snake game works on the Fastpages due to the GUI built | . Math Calculator . made using the Math class | there are different functions within the math class that produce different outputs | useful for us as we are in school and use calculators for many different things | unique interface with different types of math calculators | . More to Come! .",
           "url": "https://b-g101.github.io/BASE/frontend/overview",
           "relUrl": "/frontend/overview",
           "date": ""
