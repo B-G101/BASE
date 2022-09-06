@@ -49,6 +49,17 @@
   
 
   
+      ,"page2": {
+          "title": "Frontend Hacks",
+          "content": "| Overview | .",
+          "url": "https://b-g101.github.io/BASE/frontend/overview",
+          "relUrl": "/frontend/overview",
+          "date": ""
+      }
+      
+  
+
+  
 
   
   
@@ -70,7 +81,7 @@
   
 
   
-      ,"page10": {
+      ,"page11": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://b-g101.github.io/BASE/robots.txt",
