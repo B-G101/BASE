@@ -6,6 +6,7 @@ permalink: /frontend/overview
 
 {% include nav_frontend.html %}
 
+
 This is page where we can work on frontend pages like our Snake Game and the Math Class calculator.
 
 ## Snake Game
