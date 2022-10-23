@@ -110,8 +110,6 @@ window.onload = wrap_img;
 
 <p>It allows for faster feedback, allows to fix bugs quickly, and so forth.</p>
 
-<p>image.png</p>
-
 <p><img src="/BASE/images/ci.png" alt="" title="https://github.com/fastai/fastpages"></p>
 
 <h2 id="what-is-continuous-delivery">
@@ -165,39 +163,30 @@ You always create a branch from an existing branch. Typically, you might create 
 
 <ol>
   <li>
-<strong>Software deployment plan</strong>
-To make sure the deployment process goes as smoothly as possible it is best to have a deployment plan that we follow. By having a plan you ensure that everything is done the same way each time changes are made.</li>
-</ol>
-
-<p>A deployment plan should include rules for when to deploy from local environments to development or staging sites as well as schedules for when new changes can go to a live environment. By having a set plan you reduce the risk of conflicts between different changes and make sure the deployment process is as smooth and easy as possible. If you’re working on an open-source project it also gives you the chance to do Release Candidates and let your community test it out for any bugs you might have missed yourself.</p>
-
-<p>Besides an overall plan, it’s also important to plan each individual change that you’re going to do. This process will be very quick for minor changes but should be much more extensive for big changes. By planning well in advance, you’re much better suited to have a smooth deployment process.</p>
-
-<ol>
+    <p><strong>Software deployment plan</strong>
+ To make sure the deployment process goes as smoothly as possible it is best to have a deployment plan that we follow. By having a plan you ensure that everything is done the same way each time changes are made.
+ A deployment plan should include rules for when to deploy from local environments to development or staging sites as well as schedules for when new changes can go to a live environment. By having a set plan you reduce the risk of conflicts between different changes and make sure the deployment process is as smooth and easy as possible. If you’re working on an open-source project it also gives you the chance to do Release Candidates and let your community test it out for any bugs you might have missed yourself.
+ Besides an overall plan, it’s also important to plan each individual change that you’re going to do. This process will be very quick for minor changes but should be much more extensive for big changes. By planning well in advance, you’re much better suited to have a smooth deployment process.</p>
+  </li>
   <li>
     <p><strong>The actual development</strong>
-Once you have the plan in place, it’s time to do the actual development. To ensure that any development can be done simultaneously and without breaking anything, it’s important to only work on local or development environments.</p>
+ Once you have the plan in place, it’s time to do the actual development. To ensure that any development can be done simultaneously and without breaking anything, it’s important to only work on local or development environments.</p>
   </li>
   <li>
     <p><strong>Testing your changes</strong>
-Testing your changes is crucial to ensure that no bugs make it into the final production environment. But testing cannot be completed without deploying your changes to new environments.</p>
+ Testing your changes is crucial to ensure that no bugs make it into the final production environment. But testing cannot be completed without deploying your changes to new environments. 
+ Once you’ve tested that all of your changes work on your local or development environment we deploy the changes to the next environment in line. This should be done all the way up to your staging environment, where final QA testing should be done. If everything is properly tested and works in an environment resembling your live environment it’s time to deploy it live.</p>
   </li>
-</ol>
-
-<p>Once you’ve tested that all of your changes work on your local or development environment we deploy the changes to the next environment in line. This should be done all the way up to your staging environment, where final QA testing should be done. If everything is properly tested and works in an environment resembling your live environment it’s time to deploy it live.</p>
-
-<ol>
   <li>
     <p><strong>Deploying changes to the live environment</strong>
-Once all of the testing has been done on previous environments and any bugs have been fixed, it’s time to deploy your changes to the live environment. This should be a pretty safe thing to do, but everyone who’s worked with software development knows, that something can still go wrong.</p>
+ Once all of the testing has been done on previous environments and any bugs have been fixed, it’s time to deploy your changes to the live environment. This should be a pretty safe thing to do, but everyone who’s worked with software development knows, that something can still go wrong.</p>
   </li>
   <li>
     <p><strong>Monitor your changes</strong>
-Once your new changes are live and real users are actively using your website or application, it’s important to monitor that everything works as intended. No matter the planning put forward, there’s a chance that users encounter issues or perform actions that you did not anticipate during your planning and development.</p>
+ Once your new changes are live and real users are actively using your website or application, it’s important to monitor that everything works as intended. No matter the planning put forward, there’s a chance that users encounter issues or perform actions that you did not anticipate during your planning and development.
+ If we do need to roll back your changes, it’s important to keep calm and have a process to handle that as thoroughly as we handle deployments.</p>
   </li>
 </ol>
-
-<p>If we do need to roll back your changes, it’s important to keep calm and have a process to handle that as thoroughly as we handle deployments.</p>
 
 <p><img src="/BASE/images/deployment.png" alt="" title="https://github.com/fastai/fastpages"></p>
 
