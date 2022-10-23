@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>DevOps Process | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="DevOps Process" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="What is Continuous Integration: Continuous integration (CI) is the practice of automating the integration of code changes from multiple contributors into a single software project. It’s a primary DevOps best practice, allowing developers to frequently merge code changes into a central repository where builds and tests then run. Automated tools are used to assert the new code’s correctness before integration." />
+<meta property="og:description" content="What is Continuous Integration: Continuous integration (CI) is the practice of automating the integration of code changes from multiple contributors into a single software project. It’s a primary DevOps best practice, allowing developers to frequently merge code changes into a central repository where builds and tests then run. Automated tools are used to assert the new code’s correctness before integration." />
+<link rel="canonical" href="https://b-g101.github.io/BASE/frontend/devops" />
+<meta property="og:url" content="https://b-g101.github.io/BASE/frontend/devops" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-10-22T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="DevOps Process" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-10-22T00:00:00-05:00","datePublished":"2022-10-22T00:00:00-05:00","description":"What is Continuous Integration: Continuous integration (CI) is the practice of automating the integration of code changes from multiple contributors into a single software project. It’s a primary DevOps best practice, allowing developers to frequently merge code changes into a central repository where builds and tests then run. Automated tools are used to assert the new code’s correctness before integration.","headline":"DevOps Process","mainEntityOfPage":{"@type":"WebPage","@id":"https://b-g101.github.io/BASE/frontend/devops"},"url":"https://b-g101.github.io/BASE/frontend/devops"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/BASE/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://b-g101.github.io/BASE/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/BASE/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/BASE/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/BASE/about/">About Me</a><a class="page-link" href="/BASE/frontend/overview">Frontend Hacks</a><a class="page-link" href="/BASE/search/">Search</a><a class="page-link" href="/BASE/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <h2 id="what-is-continuous-integration">What is Continuous Integration:</h2>
+<p>Continuous integration (CI) is the practice of automating the integration of code changes from multiple contributors into a single software project. It’s a primary DevOps best practice, allowing developers to frequently merge code changes into a central repository where builds and tests then run. Automated tools are used to assert the new code’s correctness before integration.</p>
+
+<p>A source code version control system is the crux of the CI process. The version control system is also supplemented with other checks like automated code quality tests, syntax style review tools, and more.</p>
+
+<p>It allows for faster feedback, allows to fix bugs quickly, and so forth.</p>
+
+<p>image.png</p>
+
+<p><img src="/BASE/images/ci.png" alt="" title="https://github.com/fastai/fastpages" /></p>
+
+<h2 id="what-is-continuous-delivery">What is Continuous Delivery:</h2>
+<p>A continuous delivery pipeline could have a manual gate right before production. A manual gate requires human intervention, and there could be scenarios in your organization that require manual gates in pipelines. Some manual gates might be questionable, whereas some could be legitimate. One legitimate scenario allows the business team to make a last-minute release decision. The engineering team keeps a shippable version of the product ready after every sprint, and the business team makes the final call to release the product to all customers, or a cross-section of the population, or perhaps to people who live in a certain geographical location.</p>
+
+<p>Essentiallly, we want to make sure our work is going out to the internet, and is being deployed. It makes sure the programmer’s code is being delivered to multiple applications.</p>
+
+<p>We can use any third pary softwares to deploy. The most common one is AWS.</p>
+
+<p><img src="/BASE/images/cd.png" alt="" title="https://github.com/fastai/fastpages" /></p>
+
+<p>Proof of currently being deployed:
+<img src="/BASE/images/deployed.png" alt="" title="https://github.com/fastai/fastpages" /></p>
+
+<p>Most modern software development teams practice a pull request and code review workflow. Pull requests are a critical practice to effective CI. A pull request is created when a developer is ready to merge new code into the main codebase. The pull request notifies other developers of the new set of changes that are ready for integration.</p>
+
+<p>Pull requests are an opportune time to kick off the CI pipeline and run the set of automated approval steps. An additional, manual approval step is commonly added at pull request time, during which a non-stakeholder engineer performs a code review of the feature. This allows for a fresh set of eyes to review the new code and functionality. The non-stakeholder will make edit suggestions and approve or deny the pull request.</p>
+
+<p>Pull requests and code review are a powerful tool to foster passive communication and knowledge share among an engineering team. This helps guard against technical debt in the form of knowledge silos, where specific engineers are the only stakeholders for certain features of a code base.</p>
+
+<p>We espeacially use <strong>GitHub</strong> to follow these functions. 
+Pull requests let you tell others about changes you’ve pushed to a branch in a repository on GitHub. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before your changes are merged into the base branch.</p>
+
+<h2 id="benefits-of-pull-request-workflow">Benefits of Pull Request Workflow</h2>
+
+<ul>
+  <li>Clean git history - by using pull request, we can easily squash those redundant / unimportant / unclear commits before merging into main branch.</li>
+  <li>Remote code review process - before pull request, we did code review face to face either by pair programming or code presentation session.</li>
+  <li>Better software quality - making pull request means that the feature need to be approved by captain / lead and QA / QC.</li>
+</ul>
+
+<p>We haven’t used pull requests yet, however, we will be implementing them as we further develop our website.</p>
+
+<h2 id="github-branches-strategies">GitHub Branches Strategies</h2>
+<p>Branches allow you to develop features, fix bugs, or safely experiment with new ideas in a contained area of your repository.
+You always create a branch from an existing branch. Typically, you might create a new branch from the default branch of your repository. You can then work on this new branch in isolation from changes that other people are making to the repository.</p>
+
+<p><img src="/BASE/images/braches.png" alt="" title="https://github.com/fastai/fastpages" /></p>
+
+<p>Once we are done with the work, we can open a pull request to merge the changes in the current branch (the head branch) into another branch.</p>
+
+<p>After a pull request has been merged, or closed, you can delete the head branch as this is no longer needed. You must have write access in the repository to delete branches. You can’t delete branches that are directly associated with open pull requests.</p>
+
+<p><img src="/BASE/images/our_branches.png" alt="" title="https://github.com/fastai/fastpages" /></p>
+
+<h2 id="our-deployment-process">Our Deployment Process</h2>
+
+<ol>
+  <li><strong>Software deployment plan</strong>
+To make sure the deployment process goes as smoothly as possible it is best to have a deployment plan that we follow. By having a plan you ensure that everything is done the same way each time changes are made.</li>
+</ol>
+
+<p>A deployment plan should include rules for when to deploy from local environments to development or staging sites as well as schedules for when new changes can go to a live environment. By having a set plan you reduce the risk of conflicts between different changes and make sure the deployment process is as smooth and easy as possible. If you’re working on an open-source project it also gives you the chance to do Release Candidates and let your community test it out for any bugs you might have missed yourself.</p>
+
+<p>Besides an overall plan, it’s also important to plan each individual change that you’re going to do. This process will be very quick for minor changes but should be much more extensive for big changes. By planning well in advance, you’re much better suited to have a smooth deployment process.</p>
+
+<ol>
+  <li>
+    <p><strong>The actual development</strong>
+Once you have the plan in place, it’s time to do the actual development. To ensure that any development can be done simultaneously and without breaking anything, it’s important to only work on local or development environments.</p>
+  </li>
+  <li>
+    <p><strong>Testing your changes</strong>
+Testing your changes is crucial to ensure that no bugs make it into the final production environment. But testing cannot be completed without deploying your changes to new environments.</p>
+  </li>
+</ol>
+
+<p>Once you’ve tested that all of your changes work on your local or development environment we deploy the changes to the next environment in line. This should be done all the way up to your staging environment, where final QA testing should be done. If everything is properly tested and works in an environment resembling your live environment it’s time to deploy it live.</p>
+
+<ol>
+  <li>
+    <p><strong>Deploying changes to the live environment</strong>
+Once all of the testing has been done on previous environments and any bugs have been fixed, it’s time to deploy your changes to the live environment. This should be a pretty safe thing to do, but everyone who’s worked with software development knows, that something can still go wrong.</p>
+  </li>
+  <li>
+    <p><strong>Monitor your changes</strong>
+Once your new changes are live and real users are actively using your website or application, it’s important to monitor that everything works as intended. No matter the planning put forward, there’s a chance that users encounter issues or perform actions that you did not anticipate during your planning and development.</p>
+  </li>
+</ol>
+
+<p>If we do need to roll back your changes, it’s important to keep calm and have a process to handle that as thoroughly as we handle deployments.</p>
+
+<p><img src="/BASE/images/deployment.png" alt="" title="https://github.com/fastai/fastpages" /></p>
+
+<h2 id="clothing-api">Clothing API</h2>
+
+<p>Here is how we are explaining the API:</p>
+
+<p>Imagine you’re a customer at a restaurant. The waiter (the API) functions as an intermediary between customers like you (the user) and the kitchen (web server). You tell the waiter your order (API call), and the waiter requests it from the kitchen. Finally, the waiter will provide you with what you ordered.</p>
+
+<p><img src="/BASE/images/restaurant.png" alt="" title="https://github.com/fastai/fastpages" /></p>
+
+<p>We mainly use <strong>RESTful APIs</strong>:</p>
+
+<p>REST, or “representational state transfer,” is a type of software design that gives access to data (aka “web resources”) by using a uniform and predefined set of operations. The payload - the data to be delivered - defined in the request itself, will be formatted in a language such as HTML, JSON, or XML. The set of operations are the methods available to HTTP, which is the underlying protocol for how browsers retrieve websites from servers. These methods include GET, POST, PUT, DELETE, and others.</p>
+
+<p>Obviously, our RESTful API gets and posts data from the internet through HTTP. This is explained in further detail by Bria.</p>
+
+<p><img src="/BASE/images/apis.png" alt="" title="https://github.com/fastai/fastpages" /></p>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/BASE/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/BASE/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/BASE/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" target="_blank" title="fastai"><svg class="svg-icon grey"><use xlink:href="/BASE/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" target="_blank" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/BASE/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
