@@ -128,7 +128,7 @@ window.onload = wrap_img;
 
           // Country data
           for (const row of data.payload.products) {
-            // Hello please ywork
+            // Hello please work
             console.log(row);
 
             // tr for each row
@@ -141,9 +141,9 @@ window.onload = wrap_img;
 
             // data is specific to the API
             product.innerHTML = row.productTitle;
-            colors.innerHTML = row.products; 
+            colors.innerHTML = row.prices; 
             rating.innerHTML = row.rating.avgRating; 
-            price.innerHTML = row.prices.regularPrice.0.minPrice; 
+            price.innerHTML = row.valueAddedBadges.realTime; 
 
             // this build td's into tr
             tr.appendChild(product);
