@@ -78,7 +78,7 @@ window.onload = wrap_img;
   <thead>
   <tr>
     <th>Product</th>
-    <th>Colors Available</th>
+  
     <th>Rating</th>
     <th>Price</th>
   </tr>
@@ -135,19 +135,19 @@ window.onload = wrap_img;
             const tr = document.createElement("tr");
             // td for each column
             const product = document.createElement("td");
-            const colors = document.createElement("td");
+         
             const rating = document.createElement("td");
             const price = document.createElement("td");
 
             // data is specific to the API
             product.innerHTML = row.productTitle;
-            colors.innerHTML = row.prices; 
+           
             rating.innerHTML = row.rating.avgRating; 
             price.innerHTML = row.valueAddedBadges.realTime; 
 
             // this build td's into tr
             tr.appendChild(product);
-            tr.appendChild(colors);
+         
             tr.appendChild(rating);
             tr.appendChild(price);
 
