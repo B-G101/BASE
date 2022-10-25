@@ -4,22 +4,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>fastpages | An easy to use blogging platform with support for Jupyter Notebooks.</title>
+<title>Fetch of Shopping data with RapidAPI | fastpages</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="fastpages" />
+<meta property="og:title" content="Fetch of Shopping data with RapidAPI" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<link rel="canonical" href="https://b-g101.github.io/BASE/" />
-<meta property="og:url" content="https://b-g101.github.io/BASE/" />
+<meta name="description" content="Please work!!!" />
+<meta property="og:description" content="Please work!!!" />
+<link rel="canonical" href="https://b-g101.github.io/BASE/data/shopapi" />
+<meta property="og:url" content="https://b-g101.github.io/BASE/data/shopapi" />
 <meta property="og:site_name" content="fastpages" />
-<meta property="og:image" content="https://b-g101.github.io/BASE/images/logo.png" />
-<meta property="og:type" content="website" />
+<meta property="og:image" content="https://b-g101.github.io/BASE/images/teamlogo.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-10-23T00:00:00-05:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://b-g101.github.io/BASE/images/logo.png" />
-<meta property="twitter:title" content="fastpages" />
+<meta property="twitter:image" content="https://b-g101.github.io/BASE/images/teamlogo.png" />
+<meta property="twitter:title" content="Fetch of Shopping data with RapidAPI" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"fastpages","image":"https://b-g101.github.io/BASE/images/logo.png","name":"fastpages","url":"https://b-g101.github.io/BASE/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-10-23T00:00:00-05:00","datePublished":"2022-10-23T00:00:00-05:00","description":"Please work!!!","headline":"Fetch of Shopping data with RapidAPI","image":"https://b-g101.github.io/BASE/images/teamlogo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://b-g101.github.io/BASE/data/shopapi"},"url":"https://b-g101.github.io/BASE/data/shopapi"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/BASE/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://b-g101.github.io/BASE/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/BASE/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -71,80 +72,108 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home"><p><img src="/BASE/images/teambase.png" alt="" title="https://github.com/fastai/fastpages" /></p>
+        <!-- HTML table fragment for page -->
 
-<p>Welcome to the Team BASE Fastpages! Here, you will find our hacks that we do together as a team along with our review tickets for each week. Everything will be organized throughout the year and this can be a place to show the different areas we work on :)</p>
+<table>
+  <thead>
+  <tr>
+    <th>Product</th>
+    <th>Colors Available</th>
+    <th>Rating</th>
+    <th>Price</th>
+  </tr>
+  </thead>
+  <tbody id="result">
+    <!-- generated rows -->
+  </tbody>
+</table>
 
-<p><img src="/BASE/images/scrumprocess.png" alt="" title="https://github.com/fastai/fastpages" /></p>
+<!-- Script is layed out in a sequence (no function) and will execute when page is loaded -->
+<script>
+  // prepare HTML result container for new output
+  const resultContainer = document.getElementById("result");
 
-<h1 id="posts">Posts</h1>
+  // prepare fetch options
+  const url = "https://vase.nighthawkcoders.tk/api/shopapi/daily";
+
+  const options = {
+    method: 'GET', // *GET, POST, PUT, DELETE, etc.
+    mode: 'cors', // no-cors, *cors, same-origin
+    cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: 'omit', // include, *same-origin, omit
+    headers: {
+      'Content-Type': 'application/json'
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+  };
+
+  // fetch the API
+  fetch(url, options)
+    // response is a RESTful "promise" on any successful fetch
+    .then(response => {
+      // check for response errors
+      if (response.status !== 200) {
+          const errorMsg = 'Database response error: ' + response.status;
+          console.log(errorMsg);
+          const tr = document.createElement("tr");
+          const td = document.createElement("td");
+          td.innerHTML = errorMsg;
+          tr.appendChild(td);
+          resultContainer.appendChild(tr);
+          return;
+      }
+      // valid response will have json data
+      response.json().then(data => {
+          console.log(data);
+          console.log(data.product)
+
+          // World Data
+          document.getElementById("time").innerHTML = data.product.image;
+          document.getElementById("total_cases").innerHTML = data.product.availableColr;
+          document.getElementById("total_deaths").innerHTML = data.product.rating;
+          document.getElementById("active_cases").innerHTML = data.product.prices.regularPrice.minPrice;
+
+          // Country data
+          for (const row of data.product) {
+            console.log(row);
+
+            // tr for each row
+            const tr = document.createElement("tr");
+            // td for each column
+            const product = document.createElement("td");
+            const colors = document.createElement("td");
+            const rating = document.createElement("td");
+            const price = document.createElement("td");
+
+            // data is specific to the API
+            product.innerHTML = row.image;
+            colors.innerHTML = row.availableColr; 
+            rating.innerHTML = row.rating; 
+            price.innerHTML = row.prices.regularPrice.minPrice; 
+
+            // this build td's into tr
+            tr.appendChild(product);
+            tr.appendChild(colors);
+            tr.appendChild(rating);
+            tr.appendChild(price);
+
+            // add HTML to container
+            resultContainer.appendChild(tr);
+          }
+      })
+  })
+  // catch fetch errors (ie ACCESS to server blocked)
+  .catch(err => {
+    console.error(err);
+    const tr = document.createElement("tr");
+    const td = document.createElement("td");
+    td.innerHTML = err;
+    tr.appendChild(td);
+    resultContainer.appendChild(tr);
+  });
+</script>
 
 
-
-  
-
-  <!-- Hide posts if front matter flag hide:true -->
-  
-  
-
-  <!-- Sort posts by rank, then date -->
-  
-  
-  
-
- 
-  
-
-   <!-- Assemble final sorted posts array -->
-  
-  <ul class="post-list"><li><h3>
-    <a class="post-link" href="/BASE/data/shopapi">
-    Fetch of Shopping data with RapidAPI
-    </a>
-</h3><p class="post-meta-description">Please work!!!</p><p class="post-meta">Oct 23, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/BASE/2022/10/23/Clothing-Store.html">
-    Clothing Store
-    </a>
-</h3><p class="post-meta">Oct 23, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/BASE/data/jokes">
-    Fetch of Backend Jokes
-    </a>
-</h3><p class="post-meta-description">An introductory example of Frontend talking to Backend Java application serving jokes.</p><p class="post-meta">Oct 23, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/BASE/markdown/2022/10/22/devops.html">
-    DevOps Process
-    </a>
-</h3><p class="post-meta">Oct 22, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/BASE/markdown/2022/09/26/wireframes.html">
-    Project Wireframe
-    </a>
-</h3><p class="post-meta-description">This is our wireframe for our team project in the trimester</p><p class="post-meta">Sep 26, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/BASE/frontend/calculator">
-    Calculator Starters
-    </a>
-</h3><p class="post-meta-description">A common way to become familiar with a language is to build a calculator.  This calculator shows off button with actions.</p><p class="post-meta">Sep 5, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/BASE/2022/09/03/menus.html">
-    Regular Menu and GUI Menu
-    </a>
-</h3><p class="post-meta">Sep 3, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/BASE/frontend/snake_game">
-    Snake Game
-    </a>
-</h3><p class="post-meta">Sep 2, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/BASE/markdown/2020/01/14/test-markdown-post.html">
-    An Example Markdown Post
-    </a>
-</h3><p class="post-meta-description">A minimal example of using markdown with fastpages.</p><p class="post-meta">Jan 14, 2020</p>
-</li></ul>
-
-    </div>
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/BASE/"></data>
