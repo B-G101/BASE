@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "Backend",
-            "content": "",
-            "url": "https://b-g101.github.io/BASE/2022/10/24/backend.html",
-            "relUrl": "/2022/10/24/backend.html",
+            "title": "Backend Process",
+            "content": "Authoring Tools . The IDE that we are using to write our code is VS Code and we use Postman to test and document our APIs. So here we can created HTTP/s requests and read their responses returned by the server. And personally I think it helps our team visualize the API response in a more accessible way as well. . . Data Types . We plan on using a lot of String data with storing values like the name of the clothing items, the size of the clothing item, what colors the item is, and other key characteristics and data about the clothing item. Additionally we will be using a lot of integer/doubles when displaying numerical data like prices, ratings of the items, and more. . API Use . Our plan is to implement a lot of different APIs to display different clothing and product items to the reader like a Shopping search API and a Sephora API. An example of which is working here with is a Kohls API from RapidAPI. This one uses the backend code from our deployed website and displays the JSON response on our fastpage . . . Admin Log in + Inventory Database: . Since there are always clothes being made our website must be updated constantly which is where we are planning on including an admin log in area which will give the user access to a database where we will update the clothing items on the website using crud operations. And here’s our visualization for that log in system. . And using Thymeleaf and Java Controller for the more basic pages like the style quizzes, etc. . Objects: . A potential use of objects for our website would be storing each clothing item as an individual object. . We also plan on storing each clothing item as an object with unique attributes. These characteristics of the clothing items will be attributes of the individual objects. .",
+            "url": "https://b-g101.github.io/BASE/markdown/2022/10/24/backend.html",
+            "relUrl": "/markdown/2022/10/24/backend.html",
             "date": " • Oct 24, 2022"
         }
         
