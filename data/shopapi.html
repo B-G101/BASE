@@ -78,14 +78,12 @@ window.onload = wrap_img;
   <thead>
   <tr>
     <th>Product</th>
-    <th>Image</th>
     <th>Colors Available</th>
     <th>Rating</th>
     <th>Price</th>
   </tr>
   </thead>
   <tbody id="result">
-    <td id="product"></td>
     <!-- generated rows -->
   </tbody>
 </table>
@@ -127,12 +125,9 @@ window.onload = wrap_img;
       // valid response will have json data
       response.json().then(data => {
           console.log(data);
-          console.log(data.payload.products);
-
-          document.getElementById("product").innerHTML = data.payload.products.valueAddedBadges.productTitle;
 
           // Country data
-          for (const row of data.payload.products) {
+          for (const row of data.payload,products) {
             // Hello please work
             console.log(row);
 
@@ -140,20 +135,17 @@ window.onload = wrap_img;
             const tr = document.createElement("tr");
             // td for each column
             const product = document.createElement("td");
-            const image = document.createElement("td");
             const colors = document.createElement("td");
             const rating = document.createElement("td");
             const price = document.createElement("td");
 
             // data is specific to the API
-            image.innerHTML = row.image;
-            product.innerHTML = row.valueAddedBadges.productTitle;
-            colors.innerHTML = row.availableColr; 
+            product.innerHTML = row.prodType;
+            colors.innerHTML = row.products; 
             rating.innerHTML = row.rating.avgRating; 
-            price.innerHTML = row.prices.0.regularPrice.minPrice; 
+            price.innerHTML = row.productTitle; 
 
             // this build td's into tr
-            tr.appendChild(image);
             tr.appendChild(product);
             tr.appendChild(colors);
             tr.appendChild(rating);
