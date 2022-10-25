@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Fetch of Shopping data with RapidAPI",
-            "content": "Product Colors Available Rating Price .",
+            "content": "Product Image Colors Available Rating Price .",
             "url": "https://b-g101.github.io/BASE/data/shopapi",
             "relUrl": "/data/shopapi",
             "date": " • Oct 23, 2022"
