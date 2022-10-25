@@ -128,7 +128,7 @@ window.onload = wrap_img;
 
           // Country data
           for (const row of data.payload.products) {
-            // Hello please omg
+            // Hello please ywork
             console.log(row);
 
             // tr for each row
@@ -143,7 +143,7 @@ window.onload = wrap_img;
             product.innerHTML = row.productTitle;
             colors.innerHTML = row.products; 
             rating.innerHTML = row.rating.avgRating; 
-            price.innerHTML = row.prices.regularPrice.minPrice; 
+            price.innerHTML = row.prices.regularPrice.0.minPrice; 
 
             // this build td's into tr
             tr.appendChild(product);
