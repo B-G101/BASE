@@ -32,7 +32,7 @@ tags: [javascript]
 
   // prepare fetch urls
   // const url = "https://flask.nighthawkcodingsociety.com/api/jokes";
-  const url = "https://vase.nighthawkcoders.tk/api/products/";
+  const url = "https://vase.nighthawkcoders.tk/api/products";
   const get_url = url +"/";
   const buy_url = url + "/buy/";  
   const skip_url = url + "/skip/";  
