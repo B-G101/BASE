@@ -1,12 +1,12 @@
 ---
-title: Fetch of Shopping data with RapidAPI
+title: Kohls Shopping API
 layout: default
-description: Please work!!!
 permalink: /data/shopapi
 image: /images/teamlogo.png
 tags: [javascript]
-hide: true
 ---
+<body style="background-color: #F8F2F0" >
+</body>
 
 <!-- HTML table fragment for page -->
 

@@ -5,6 +5,7 @@ description: A common way to become familiar with a language is to build a calcu
 categories: [pbl]
 permalink: /frontend/calculator
 tags: [javascript, style, controls, timers]
+hide: true
 ---
 {% include nav_frontend.html %}
 

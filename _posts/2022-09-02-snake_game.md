@@ -4,6 +4,7 @@ layout: default
 permalink: frontend/snake_game
 categories: [pbl]
 tags: [javascript, style, controls, timers]
+hide: true
 ---
 
 {% include nav_frontend.html %}
