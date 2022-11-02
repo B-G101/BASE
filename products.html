@@ -92,15 +92,15 @@ window.onload = wrap_img;
   const resultContainer = document.getElementById("result");
 
   // keys for product reactions
-  const BUY = "Buy";
-  const SKIP = "Skip";
+  const YA = "Ya";
+  const NA = "Na";
 
   // prepare fetch urls
   // const url = "https://flask.nighthawkcodingsociety.com/api/products";
   const url = "https://vase.nighthawkcoders.tk/api/products";
   const get_url = url +"/";
-  const buy_url = url + "/buy/";  
-  const skip_url = url + "/skip/";  
+  const ya_url = url + "/buy/";  
+  const na_url = url + "/skip/";  
 
   // prepare fetch GET options
   const options = {
@@ -136,32 +136,32 @@ window.onload = wrap_img;
             const product = document.createElement("td");
               product.innerHTML = row.id + ". " + row.product;  // add fetched data to innerHTML
 
-            // td for buy cell with onclick actions
-            const buy = document.createElement("td");
-              const buy_but = document.createElement('button');
-              buy_but.id = BUY+row.id   // establishes a buy JS id for cell
-              buy_but.innerHTML = row.buy;  // add fetched "buy count" to innerHTML
-              buy_but.onclick = function () {
+            // td for ya cell with onclick actions
+            const ya = document.createElement("td");
+              const ya_but = document.createElement('button');
+              ya_but.id = YA+row.id   // establishes a ya JS id for cell
+              ya_but.innerHTML = row.ya;  // add fetched "ya count" to innerHTML
+              ya_but.onclick = function () {
                 // onclick function call with "like parameters"
-                reaction(BUY, like_url+row.id, buy_but.id);  
+                reaction(YA, like_url+row.id, ya_but.id);  
               };
-              buy.appendChild(buy_but);  // add "buy button" to buy cell
+              ya.appendChild(ya_but);  // add "ya button" to ya cell
 
-            // td for skip cell with onclick actions
-            const skip = document.createElement("td");
-              const skip_but = document.createElement('button');
-              skip_but.id = SKIP+row.id  // establishes a skip JS id for cell
-              skip_but.innerHTML = row.skip;  // add fetched "skip count" to innerHTML
-              skip_but.onclick = function () {
-                // onclick function call with "skip parameters"
-                reaction(SKIP, skip_url+row.id, skip_but.id);  
+            // td for na cell with onclick actions
+            const na = document.createElement("td");
+              const na_but = document.createElement('button');
+              na_but.id = NA+row.id  // establishes a na JS id for cell
+              na_but.innerHTML = row.na;  // add fetched "na count" to innerHTML
+              na_but.onclick = function () {
+                // onclick function call with "na parameters"
+                reaction(NA, na_url+row.id, na_but.id);  
               };
-              skip.appendChild(skip_but);  // add "skip button" to skip cell
+              na.appendChild(na_but);  // add "na button" to na cell
              
             // this builds ALL td's (cells) into tr (row) element
             tr.appendChild(product);
-            tr.appendChild(buy);
-            tr.appendChild(skip);
+            tr.appendChild(ya);
+            tr.appendChild(na);
 
             // this adds all the tr (row) work above to the HTML "result" container
             resultContainer.appendChild(tr);
@@ -173,7 +173,7 @@ window.onload = wrap_img;
     error(err + " " + get_url);
   });
 
-  // Reaction function to likes or skips user actions
+  // Reaction function to likes or nas user actions
   function reaction(type, put_url, elemID) {
 
     // fetch the API
@@ -188,11 +188,11 @@ window.onload = wrap_img;
       // valid response will have JSON data
       response.json().then(data => {
           console.log(data);
-          // Likes or skips updated/incremented
-          if (type === BUY) // like data element
-            document.getElementById(elemID).innerHTML = data.buy;  // fetched buy data assigned to buy Document Object Model (DOM)
-          else if (type === SKIP) // skip data element
-            document.getElementById(elemID).innerHTML = data.skip;  // fetched skip data assigned to skip Document Object Model (DOM)
+          // Likes or nas updated/incremented
+          if (type === YA) // like data element
+            document.getElementById(elemID).innerHTML = data.ya;  // fetched ya data assigned to ya Document Object Model (DOM)
+          else if (type === NA) // na data element
+            document.getElementById(elemID).innerHTML = data.na;  // fetched na data assigned to na Document Object Model (DOM)
           else
             error("unknown type: " + type);  // should never occur
       })
