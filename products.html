@@ -4,23 +4,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Fetch of Shopping data with RapidAPI | fastpages</title>
+<title>Rate Popular Products | fastpages</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Fetch of Shopping data with RapidAPI" />
+<meta property="og:title" content="Rate Popular Products" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Please work!!!" />
-<meta property="og:description" content="Please work!!!" />
-<link rel="canonical" href="https://b-g101.github.io/BASE/data/shopapi" />
-<meta property="og:url" content="https://b-g101.github.io/BASE/data/shopapi" />
+<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<link rel="canonical" href="https://b-g101.github.io/BASE/products" />
+<meta property="og:url" content="https://b-g101.github.io/BASE/products" />
 <meta property="og:site_name" content="fastpages" />
 <meta property="og:image" content="https://b-g101.github.io/BASE/images/teamlogo.png" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-10-23T00:00:00-05:00" />
+<meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://b-g101.github.io/BASE/images/teamlogo.png" />
-<meta property="twitter:title" content="Fetch of Shopping data with RapidAPI" />
+<meta property="twitter:title" content="Rate Popular Products" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-10-23T00:00:00-05:00","datePublished":"2022-10-23T00:00:00-05:00","description":"Please work!!!","headline":"Fetch of Shopping data with RapidAPI","image":"https://b-g101.github.io/BASE/images/teamlogo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://b-g101.github.io/BASE/data/shopapi"},"url":"https://b-g101.github.io/BASE/data/shopapi"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Rate Popular Products","image":"https://b-g101.github.io/BASE/images/teamlogo.png","url":"https://b-g101.github.io/BASE/products"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/BASE/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://b-g101.github.io/BASE/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/BASE/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -73,98 +72,150 @@ window.onload = wrap_img;
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
         <!-- HTML table fragment for page -->
-
 <table>
   <thead>
   <tr>
-    <th>Product</th>
-  
-    <th>Rating</th>
-    <th>Price</th>
+    <th>Joke</th>
+    <th>Buy</th>
+    <th>Skip</th>
   </tr>
   </thead>
   <tbody id="result">
-    <!-- generated rows -->
+    <!-- javascript generated data -->
   </tbody>
 </table>
 
-<!-- Script is layed out in a sequence (no function) and will execute when page is loaded -->
+<!-- Script is layed out in a sequence (without a function) and will execute when page is loaded -->
 <script>
-  // prepare HTML result container for new output
+
+  // prepare HTML defined "result" container for new output
   const resultContainer = document.getElementById("result");
 
-  // prepare fetch options
-  const url = "https://vase.nighthawkcoders.tk/api/shopapi/daily";
+  // keys for joke reactions
+  const BUY = "Buy";
+  const SKIP = "Skip";
 
+  // prepare fetch urls
+  // const url = "https://flask.nighthawkcodingsociety.com/api/jokes";
+  const url = "https://vase.nighthawkcoders.tk/api/products/";
+  const get_url = url +"/";
+  const buy_url = url + "/buy/";  
+  const skip_url = url + "/skip/";  
+
+  // prepare fetch GET options
   const options = {
     method: 'GET', // *GET, POST, PUT, DELETE, etc.
     mode: 'cors', // no-cors, *cors, same-origin
     cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: 'omit', // include, *same-origin, omit
+    credentials: 'same-origin', // include, same-origin, omit
     headers: {
       'Content-Type': 'application/json'
       // 'Content-Type': 'application/x-www-form-urlencoded',
     },
   };
+  // prepare fetch PUT options, clones with JS Spread Operator (...)
+  const put_options = {...options, method: 'PUT'}; // clones and replaces method
 
   // fetch the API
-  fetch(url, options)
+  fetch(get_url, options)
     // response is a RESTful "promise" on any successful fetch
     .then(response => {
       // check for response errors
       if (response.status !== 200) {
-          const errorMsg = 'Database response error: ' + response.status;
-          console.log(errorMsg);
-          const tr = document.createElement("tr");
-          const td = document.createElement("td");
-          td.innerHTML = errorMsg;
-          tr.appendChild(td);
-          resultContainer.appendChild(tr);
+          error('GET API response failure: ' + response.status);
           return;
       }
-      // valid response will have json data
+      // valid response will have JSON data
       response.json().then(data => {
           console.log(data);
-
-          // Country data
-          for (const row of data.payload.products) {
-            // Hello please work
-            console.log(row);
-
-            // tr for each row
+          for (const row of data) {
+            // make "tr element" for each "row of data"
             const tr = document.createElement("tr");
-            // td for each column
-            const product = document.createElement("td");
-         
-            const rating = document.createElement("td");
-            const price = document.createElement("td");
+            
+            // td for joke cell
+            const joke = document.createElement("td");
+              joke.innerHTML = row.id + ". " + row.joke;  // add fetched data to innerHTML
 
-            // data is specific to the API
-            product.innerHTML = row.productTitle;
-           
-            rating.innerHTML = row.rating.avgRating; 
-            price.innerHTML = row.valueAddedBadges.realTime; 
+            // td for buy cell with onclick actions
+            const buy = document.createElement("td");
+              const buy_but = document.createElement('button');
+              buy_but.id = BUY+row.id   // establishes a buy JS id for cell
+              buy_but.innerHTML = row.buy;  // add fetched "buy count" to innerHTML
+              buy_but.onclick = function () {
+                // onclick function call with "like parameters"
+                reaction(BUY, like_url+row.id, buy_but.id);  
+              };
+              buy.appendChild(buy_but);  // add "buy button" to buy cell
 
-            // this build td's into tr
-            tr.appendChild(product);
-         
-            tr.appendChild(rating);
-            tr.appendChild(price);
+            // td for skip cell with onclick actions
+            const skip = document.createElement("td");
+              const skip_but = document.createElement('button');
+              skip_but.id = SKIP+row.id  // establishes a skip JS id for cell
+              skip_but.innerHTML = row.skip;  // add fetched "skip count" to innerHTML
+              skip_but.onclick = function () {
+                // onclick function call with "skip parameters"
+                reaction(SKIP, skip_url+row.id, skip_but.id);  
+              };
+              skip.appendChild(skip_but);  // add "skip button" to skip cell
+             
+            // this builds ALL td's (cells) into tr (row) element
+            tr.appendChild(joke);
+            tr.appendChild(buy);
+            tr.appendChild(skip);
 
-            // add HTML to container
+            // this adds all the tr (row) work above to the HTML "result" container
             resultContainer.appendChild(tr);
           }
       })
   })
-  // catch fetch errors (ie ACCESS to server blocked)
+  // catch fetch errors (ie Nginx ACCESS to server blocked)
   .catch(err => {
+    error(err + " " + get_url);
+  });
+
+  // Reaction function to likes or skips user actions
+  function reaction(type, put_url, elemID) {
+
+    // fetch the API
+    fetch(put_url, put_options)
+    // response is a RESTful "promise" on any successful fetch
+    .then(response => {
+      // check for response errors
+      if (response.status !== 200) {
+          error("PUT API response failure: " + response.status)
+          return;  // api failure
+      }
+      // valid response will have JSON data
+      response.json().then(data => {
+          console.log(data);
+          // Likes or skips updated/incremented
+          if (type === BUY) // like data element
+            document.getElementById(elemID).innerHTML = data.buy;  // fetched buy data assigned to buy Document Object Model (DOM)
+          else if (type === SKIP) // skip data element
+            document.getElementById(elemID).innerHTML = data.skip;  // fetched skip data assigned to skip Document Object Model (DOM)
+          else
+            error("unknown type: " + type);  // should never occur
+      })
+    })
+    // catch fetch errors (ie Nginx ACCESS to server blocked)
+    .catch(err => {
+      error(err + " " + put_url);
+    });
+    
+  }
+
+  // Something went wrong with actions or responses
+  function error(err) {
+    // log as Error in console
     console.error(err);
+    // append error to resultContainer
     const tr = document.createElement("tr");
     const td = document.createElement("td");
     td.innerHTML = err;
     tr.appendChild(td);
     resultContainer.appendChild(tr);
-  });
+  }
+
 </script>
 
 

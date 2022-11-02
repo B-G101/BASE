@@ -161,6 +161,17 @@
   
 
   
+      ,"page5": {
+          "title": "Rate Popular Products",
+          "content": "Joke Buy Skip .",
+          "url": "https://b-g101.github.io/BASE/products",
+          "relUrl": "/products",
+          "date": ""
+      }
+      
+  
+
+  
   
 
   
@@ -169,7 +180,7 @@
   
 
   
-      ,"page8": {
+      ,"page9": {
           "title": "Kohls Shopping API",
           "content": "Product Rating Price .",
           "url": "https://b-g101.github.io/BASE/data/shopapi",
@@ -191,7 +202,7 @@
   
 
   
-      ,"page13": {
+      ,"page14": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://b-g101.github.io/BASE/robots.txt",
