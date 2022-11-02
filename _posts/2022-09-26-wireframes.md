@@ -4,6 +4,7 @@ layout: post
 description: This is our wireframe for our team project in the trimester
 categories: [markdown]
 title: Project Wireframe
+hide: true
 ---
 
 ## Project Idea
