@@ -78,7 +78,7 @@ tags: [javascript]
               ya_but.innerHTML = row.ya;  // add fetched "ya count" to innerHTML
               ya_but.onclick = function () {
                 // onclick function call with "like parameters"
-                reaction(YA, like_url+row.id, ya_but.id);  
+                reaction(YA, ya_url+row.id, ya_but.id);  
               };
               ya.appendChild(ya_but);  // add "ya button" to ya cell
 
