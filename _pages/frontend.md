@@ -4,8 +4,11 @@ title: Frontend Hacks
 permalink: /frontend/overview
 ---
 
+
 {% include nav_frontend.html %}
 
+<body style="background-color: #F8F2F0" >
+</body>
 
 This is page where we can work on frontend pages like our Snake Game and the Math Class calculator.
 
