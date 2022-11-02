@@ -10,7 +10,7 @@ tags: [javascript]
 <table>
   <thead>
   <tr>
-    <th>Joke</th>
+    <th>Product</th>
     <th>Buy</th>
     <th>Skip</th>
   </tr>
@@ -26,12 +26,12 @@ tags: [javascript]
   // prepare HTML defined "result" container for new output
   const resultContainer = document.getElementById("result");
 
-  // keys for joke reactions
+  // keys for product reactions
   const BUY = "Buy";
   const SKIP = "Skip";
 
   // prepare fetch urls
-  // const url = "https://flask.nighthawkcodingsociety.com/api/jokes";
+  // const url = "https://flask.nighthawkcodingsociety.com/api/products";
   const url = "https://vase.nighthawkcoders.tk/api/products";
   const get_url = url +"/";
   const buy_url = url + "/buy/";  
@@ -67,9 +67,9 @@ tags: [javascript]
             // make "tr element" for each "row of data"
             const tr = document.createElement("tr");
             
-            // td for joke cell
-            const joke = document.createElement("td");
-              joke.innerHTML = row.id + ". " + row.joke;  // add fetched data to innerHTML
+            // td for product cell
+            const product = document.createElement("td");
+              product.innerHTML = row.id + ". " + row.product;  // add fetched data to innerHTML
 
             // td for buy cell with onclick actions
             const buy = document.createElement("td");
@@ -94,7 +94,7 @@ tags: [javascript]
               skip.appendChild(skip_but);  // add "skip button" to skip cell
              
             // this builds ALL td's (cells) into tr (row) element
-            tr.appendChild(joke);
+            tr.appendChild(product);
             tr.appendChild(buy);
             tr.appendChild(skip);
 
