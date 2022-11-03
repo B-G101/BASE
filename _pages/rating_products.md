@@ -13,7 +13,7 @@ tags: [javascript]
     <th>Product</th>
     <th>Buy</th>
     <th>Skip</th>
-  </tr>
+  </tr> 
   </thead>
   <tbody id="result">
     <!-- javascript generated data -->
