@@ -99,6 +99,34 @@ cb=googleTranslateElementInit">
       padding-top: 0.5rem;
     }
   }
+
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
 </style>
 
 <script src="//cdn.shopify.com/s/files/1/0455/9827/7796/t/36/assets/details-disclosure.js?v=130383321174778955031636473968" defer="defer"></script>
@@ -122,7 +150,6 @@ cb=googleTranslateElementInit">
            <div id="menu-drawer" class="menu-drawer motion-reduce" tabindex="-1">
               <div class="menu-drawer__inner-container">
                 <div class="mobile_menu_header">
-                  
                   <predictive-search class="search-modal__form" data-loading-text="Loading..."><form action="/search" method="get" role="search" class="search search-modal__form">
                         <div class="field">
                           <input class="search__input field__input" id="Search-In-Modal-1" type="search" name="q" value="" placeholder="Search" role="combobox" aria-expanded="false" aria-owns="predictive-search-results-list" aria-controls="predictive-search-results-list" aria-haspopup="listbox" aria-autocomplete="list" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false">
@@ -148,8 +175,6 @@ cb=googleTranslateElementInit">
              </div>
               <div class="menu-drawer__navigation-container">
                 <nav class="menu-drawer__navigation">
-
-              
               <ul class="nav__list">
                 <li class="myaccount_hello_drawer"><div class="my_account_sidebar_link">
                       <div class="account_img">
@@ -159,95 +184,32 @@ cb=googleTranslateElementInit">
                       </div>
                       <a href="/account/login" id="customer_login_link">SIGN IN</a> 
                       
-                  </div></li><li class="nav__list_first">
-                  <a href="/collections/just-in"><div class="a_first_level">JUST IN</div></a><ul class="group-list"></ul>
-                </li><li class="nav__list_first">
-                  <a href="/collections/basics"><div class="a_first_level">BASICS</div></a><input id="group-BASICS" type="checkbox" hidden="">
-                  <label for="group-BASICS"></label><ul class="group-list"><li class="nav__list_second">
-                      <a href="/collections/basics-tanks"><div class="a_second_level"> TANKS</div></a><ul class="sub-group-list"></ul>                     
-                    </li><li class="nav__list_second">
-                      <a href="/collections/basics-t-shirts"><div class="a_second_level"> T-SHIRTS</div></a><ul class="sub-group-list"></ul>                     
-                    </li><li class="nav__list_second">
-                      <a href="/collections/basics-bottoms"><div class="a_second_level"> BOTTOMS</div></a><ul class="sub-group-list"></ul>                     
-                    </li></ul>
-                </li><li class="nav__list_first">
-                  <a href="/collections/clothing"><div class="a_first_level">CLOTHING</div></a><input id="group-CLOTHING" type="checkbox" hidden="">
-                  <label for="group-CLOTHING"></label><ul class="group-list"><li class="nav__list_second">
-                      <a href="/collections/clothing"><div class="a_second_level"> VIEW ALL</div></a><ul class="sub-group-list"></ul>                     
-                    </li><li class="nav__list_second">
-                      <a href="/collections/sweatpants-sweatshirts"><div class="a_second_level"> SWEATPANTS &amp; SWEATSHIRTS</div></a><ul class="sub-group-list"></ul>                     
-                    </li><li class="nav__list_second">
-                      <a href="/collections/clothing-sweaters"><div class="a_second_level"> SWEATERS</div></a><input id="sub-group-SWEATERS" type="checkbox" hidden="">
-                      <label for="sub-group-SWEATERS"></label><ul class="sub-group-list"><a href="/collections/clothing-cotton-sweaters">
-                          <li class="nav__list_third">
-                            COTTON
-                          </li>
-                        </a><a href="/collections/cardigans">
-                          <li class="nav__list_third">
-                            CARDIGANS
-                          </li>
-                        </a><a href="/collections/wool-sweaters">
-                          <li class="nav__list_third">
-                            WOOL
-                          </li>
-                        </a></ul>                     
-                    </li><li class="nav__list_second">
-                      <a href="/collections/tops"><div class="a_second_level"> TOPS</div></a><ul class="sub-group-list"></ul>                     
-                    </li><li class="nav__list_second">
-                      <a href="/collections/clothing-bottoms"><div class="a_second_level"> BOTTOMS</div></a><input id="sub-group-BOTTOMS" type="checkbox" hidden="">
-                      <label for="sub-group-BOTTOMS"></label><ul class="sub-group-list"><a href="/collections/clothing-jeans">
-                          <li class="nav__list_third">
-                            JEANS
-                          </li>
-                        </a><a href="/collections/clothing-pants">
-                          <li class="nav__list_third">
-                            PANTS
-                          </li>
-                        </a><a href="/collections/shorts-skirts">
-                          <li class="nav__list_third">
-                            SHORTS &amp; SKIRTS
-                          </li>
-                        </a></ul>                     
-                    </li><li class="nav__list_second">
-                      <a href="/collections/clothing-outerwear"><div class="a_second_level"> JACKETS</div></a><ul class="sub-group-list"></ul>                     
-                    </li><li class="nav__list_second">
-                      <a href="/collections/cargo"><div class="a_second_level"> CARGO</div></a><ul class="sub-group-list"></ul>                     
-                    </li><li class="nav__list_second">
-                      <a href="/collections/stripes"><div class="a_second_level"> STRIPES</div></a><ul class="sub-group-list"></ul>                     
-                    </li><li class="nav__list_second">
-                      <a href="/collections/clothing-matching-sets"><div class="a_second_level"> MATCHING SETS</div></a><ul class="sub-group-list"></ul>                     
-                    </li><li class="nav__list_second">
-                      <a href="/collections/intimates"><div class="a_second_level"> INTIMATES</div></a><ul class="sub-group-list"></ul>                     
-                    </li><li class="nav__list_second">
-                      <a href="/collections/clothing-dresses"><div class="a_second_level"> DRESSES</div></a><ul class="sub-group-list"></ul>                     
-                    </li></ul>
-                </li><li class="nav__list_first">
-                  <a href="/collections/graphics"><div class="a_first_level">GRAPHICS</div></a><input id="group-GRAPHICS" type="checkbox" hidden="">
-                  <label for="group-GRAPHICS"></label><ul class="group-list"><li class="nav__list_second">
-                      <a href="/collections/graphics-view-all"><div class="a_second_level"> VIEW ALL</div></a><ul class="sub-group-list"></ul>                     
-                    </li><li class="nav__list_second">
-                      <a href="/collections/graphics-sweats"><div class="a_second_level"> GRAPHICS SWEATS </div></a><ul class="sub-group-list"></ul>                     
-                    </li><li class="nav__list_second">
-                      <a href="/collections/graphics-tees"><div class="a_second_level"> GRAPHICS TEES</div></a><ul class="sub-group-list"></ul>                     
-                    </li></ul>
-                </li><li class="nav__list_first">
-                  <a href="/collections/accessories"><div class="a_first_level">ACCESSORIES</div></a><input id="group-ACCESSORIES" type="checkbox" hidden="">
-                  <label for="group-ACCESSORIES"></label><ul class="group-list"><li class="nav__list_second">
-                      <a href="/collections/accessories-view-all"><div class="a_second_level"> VIEW ALL</div></a><ul class="sub-group-list"></ul>                     
-                    </li><li class="nav__list_second">
-                      <a href="/collections/accessories-jewelry"><div class="a_second_level"> JEWELRY</div></a><ul class="sub-group-list"></ul>                     
-                    </li><li class="nav__list_second">
-                      <a href="/collections/accessories-bags-backpacks"><div class="a_second_level"> BAGS &amp; BACKPACKS</div></a><ul class="sub-group-list"></ul>                     
-                    </li><li class="nav__list_second">
-                      <a href="/collections/accessories-belts"><div class="a_second_level"> BELTS</div></a><ul class="sub-group-list"></ul>                     
-                    </li><li class="nav__list_second">
-                      <a href="/collections/accessories-hair-accessory"><div class="a_second_level"> HAIR ACCESSORIES</div></a><ul class="sub-group-list"></ul>                     
-                    </li><li class="nav__list_second">
-                      <a href="/collections/accessories-socks"><div class="a_second_level"> SOCKS</div></a><ul class="sub-group-list"></ul>                     
-                    </li><li class="nav__list_second">
-                      <a href="/collections/accessories-hats-caps"><div class="a_second_level"> HATS &amp; CAPS</div></a><ul class="sub-group-list"></ul>                     
-                    </li></ul>
-                </li><li class="nav__list_first">
+
+
+                      <div class="dropdown">
+                        <button class="dropbtn">Just In</button>
+                        <div class="dropdown-content">
+                          <a href="#">Tanks</a>
+                          <a href="#">T-Shirts</a>
+                          <a href="#">Bottoms</a>
+                        </div>
+                      </div>
+
+
+                      <div class="dropdown">
+                        <button class="dropbtn">Just In</button>
+                        <div class="dropdown-content">
+                          <a href="#">Tanks</a>
+                          <a href="#">T-Shirts</a>
+                          <a href="#">Bottoms</a>
+                        </div>
+                      </div>
+
+                    
+
+
+
+
 
                 </li><li class="nav__list_first">
         
@@ -348,51 +310,82 @@ cb=googleTranslateElementInit">
   
     <nav class="Header__MainNav header__inline-menu">
             <ul class="main-navigation list-menu list-menu--inline"><li>
-                <a href="/collections/just-in">JUST IN</a></li><li>
-                <a href="/collections/basics">BASICS</a><ul class="main-navigation-childlinks-list"><li>
-                        <a href="/collections/basics-tanks">TANKS</a></li><li>
-                        <a href="/collections/basics-t-shirts">T-SHIRTS</a></li><li>
-                        <a href="/collections/basics-bottoms">BOTTOMS</a></li></ul></li><li>
-                <a href="/collections/clothing">CLOTHING</a><ul class="main-navigation-childlinks-list"><li>
-                        <a href="/collections/clothing">VIEW ALL</a></li><li>
-                        <a href="/collections/sweatpants-sweatshirts">SWEATPANTS &amp; SWEATSHIRTS</a></li><li>
-                        <a href="/collections/clothing-sweaters">SWEATERS</a><svg class="Icon Icon--select-arrow-right" role="presentation" viewBox="0 0 11 18" width="6" height="10">
-                          <path d="M1.5 1.5l8 7.5-8 7.5" stroke-width="2" stroke="#b1b0ab" fill="none" fill-rule="evenodd" stroke-linecap="square"></path>
-                        </svg><ul class="main-navigation-grandchildlinks-list"><li>
-                                    <a href="/collections/clothing-cotton-sweaters">COTTON</a>
-                                  </li><li>
-                                    <a href="/collections/cardigans">CARDIGANS</a>
-                                  </li><li>
-                                    <a href="/collections/wool-sweaters">WOOL</a>
-                                  </li></ul></li><li>
-                        <a href="/collections/tops">TOPS</a></li><li>
-                        <a href="/collections/clothing-bottoms">BOTTOMS</a><svg class="Icon Icon--select-arrow-right" role="presentation" viewBox="0 0 11 18" width="6" height="10">
-                          <path d="M1.5 1.5l8 7.5-8 7.5" stroke-width="2" stroke="#b1b0ab" fill="none" fill-rule="evenodd" stroke-linecap="square"></path>
-                        </svg><ul class="main-navigation-grandchildlinks-list"><li>
-                                    <a href="/collections/clothing-jeans">JEANS</a>
-                                  </li><li>
-                                    <a href="/collections/clothing-pants">PANTS</a>
-                                  </li><li>
-                                    <a href="/collections/shorts-skirts">SHORTS &amp; SKIRTS</a>
-                                  </li></ul></li><li>
-                        <a href="/collections/clothing-outerwear">JACKETS</a></li><li>
-                        <a href="/collections/cargo">CARGO</a></li><li>
-                        <a href="/collections/stripes">STRIPES</a></li><li>
-                        <a href="/collections/clothing-matching-sets">MATCHING SETS</a></li><li>
-                        <a href="/collections/intimates">INTIMATES</a></li><li>
-                        <a href="/collections/clothing-dresses">DRESSES</a></li></ul></li><li>
-                <a href="/collections/graphics">GRAPHICS</a><ul class="main-navigation-childlinks-list"><li>
-                        <a href="/collections/graphics-view-all">VIEW ALL</a></li><li>
-                        <a href="/collections/graphics-sweats">GRAPHICS SWEATS </a></li><li>
-                        <a href="/collections/graphics-tees">GRAPHICS TEES</a></li></ul></li><li>
-                <a href="/collections/accessories">ACCESSORIES</a><ul class="main-navigation-childlinks-list"><li>
-                        <a href="/collections/accessories-view-all">VIEW ALL</a></li><li>
-                        <a href="/collections/accessories-jewelry">JEWELRY</a></li><li>
-                        <a href="/collections/accessories-bags-backpacks">BAGS &amp; BACKPACKS</a></li><li>
-                        <a href="/collections/accessories-belts">BELTS</a></li><li>
-                        <a href="/collections/accessories-hair-accessory">HAIR ACCESSORIES</a></li><li>
-                        <a href="/collections/accessories-socks">SOCKS</a></li><li>
-                        <a href="/collections/accessories-hats-caps">HATS &amp; CAPS</a></li></ul></li><li>
+                
+                <div class="dropdown">
+                  <button class="dropbtn">Just In</button>
+                  <div class="dropdown-content">
+                    <a href="#">Tanks</a>
+                    <a href="#">T-Shirts</a>
+                    <a href="#">Bottoms</a>
+                  </div>
+                </div>
+
+                <div class="dropdown">
+                  <button class="dropbtn">Clothing Material</button>
+                  <div class="dropdown-content">
+                    <a href="#">Wool</a>
+                    <a href="#">Polyester</a>
+                    <a href="#">Cottons</a>
+                  </div>
+                </div>
+
+
+                <div class="dropdown">
+                  <button class="dropbtn">Graphic</button>
+                  <div class="dropdown-content">
+                    <a href="#">Graphic Tees</a>
+                    <a href="#">Graphic Crew Necks</a>
+                    <a href="#">Graphic Sweats</a>
+                  </div>
+                </div>
+
+                <div class="dropdown">
+                  <button class="dropbtn">Sweats</button>
+                  <div class="dropdown-content">
+                    <a href="https://ibex.com/products/fisherman-beanie-patch-logo?variant=42062062256299&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&utm_source=google&utm_medium=cpc&gclid=CjwKCAjwzY2bBhB6EiwAPpUpZszH4zCbd23BX6iYkPqLmsOZChbdmt7KbdjZsKbEvtjIWFTXg6-qBBoCIZkQAvD_BwE">Beanies</a>
+                    <a href="https://www.pacsun.com/womens/pants/sweatpants/?OriginId=GOG&XCIDP=P:G_Search_NB_Womens_DSA&gclid=CjwKCAjwzY2bBhB6EiwAPpUpZtObz8GOK5XUd50XEGxZOUr45LIjJhrQvf8jZ_kb6U-ENho7FIfgyRoCi4EQAvD_BwE&gclsrc=aw.ds">Sweatshirts</a>
+                    <a href="https://www.pacsun.com/womens/pants/sweatpants/?OriginId=GOG&XCIDP=P:G_Search_NB_Womens_DSA&gclid=CjwKCAjwzY2bBhB6EiwAPpUpZtObz8GOK5XUd50XEGxZOUr45LIjJhrQvf8jZ_kb6U-ENho7FIfgyRoCi4EQAvD_BwE&gclsrc=aw.ds">Sweatpants</a>
+                    <a href="#">Bands</a>
+                  </div>
+                </div>
+
+                <div class="dropdown">
+                  <button class="dropbtn">Jewelery</button>
+                  <div class="dropdown-content">
+                    <a href="https://www.amazon.com/gold-hoop-earrings/s?k=gold+hoop+earrings">Hoops</a>
+                    <a href="https://www.cartier.com/en-us/jewelry/necklaces/?adlgid=c%7cg%7c%7c469100196654%7c&gclid=CjwKCAjwzY2bBhB6EiwAPpUpZkbECVbElU7xFlJhkL6482IkSZ9L5I000qdYijslmxxjP8I1bwPwFxoCs6oQAvD_BwE&gclsrc=aw.ds">Necklaces</a>
+                    <a href="https://gorjana.com/collections/studs?g_adtype=search&g_acctid=451-840-7795&g_campaign=Search_non-brand_dsa_categories_mid&g_campaignid=8008057828&g_adgroupid=80764807417&g_adid=632690595300&g_keyword=&g_keywordid=dsa-40590162076&g_network=g&utm_source=google&utm_medium=cpc&utm_campaign=8008057828-80764807417-632690595300&gclid=CjwKCAjwzY2bBhB6EiwAPpUpZp_bSp33I-hRkzncBsGy3y9gICQMZjeo9oXAFN4L6tzLKBtnbYjpIxoCLGIQAvD_BwE">Stud Earings</a>
+                    <a href="https://www.kendrascott.com/jewelry/bracelets/">Bracelets</a>
+                  </div>
+                </div>
+
+                <div class="dropdown">
+                  <button class="dropbtn">Accessories</button>
+                  <div class="dropdown-content">
+                    <a href="https://herschel.com/">Bags</a>
+                    <a href="https://www.amazon.com/hair-clips/s?k=hair+clips">Hair Clips</a>
+                    <a href="https://www.happysocks.com/us/">Socks</a>
+                  </div>
+                </div>
+
+                <div class="dropdown">
+                  <button class="dropbtn">Shoes</button>
+                  <div class="dropdown-content">
+                    <a href="https://www.nike.com/">Air Forces</a>
+                    <a href="https://www.adidas.com/us">Adidas</a>
+                    <a href="https://www.fila.com/women-shoes">Fila Stompers</a>
+                  </div>
+                </div>
+
+                <div class="dropdown">
+                  <button class="dropbtn">Dresses</button>
+                  <div class="dropdown-content">
+                    <a href="https://www.windsorstore.com/">Windsor Dresses</a>
+                    <a href="https://www.lucyinthesky.com/shop">Lucy in the sky</a>
+                    <a href="https://www.lulus.com/">Lulus</a>
+                  </div>
+                </div>
+
           </nav>
     </div>
 
@@ -524,7 +517,7 @@ Item added to your cart</h2>
 
 
 <div class="card-wrapper">
-  <a href="/products/zelly-basic-top" class="full-unstyled-link">
+  <a href="https://www.pacsun.com/john-galt/brown-zelly-top-0704601600427.html?&queryID=d080352a236eda66a3b7f453b1ba6620&objectID=2384881&indexName=production_web_pacsun_demandware_net__pacsun__products__default" class="full-unstyled-link">
     <span class="visually-hidden">Zelly Basic Top</span>
     <div class="card card--product" tabindex="-1">
       <div class="card__inner"><div>
@@ -600,7 +593,7 @@ Item added to your cart</h2>
 
 
 <div class="card-wrapper">
-  <a href="/products/zelly-top-2" class="full-unstyled-link">
+  <a href="https://www.pacsun.com/john-galt/brown-zelly-short-sleeve-top-0704601600437.html?&queryID=d4b3a03c0e450d99bec02e1be9b5a5e8&objectID=2863629&indexName=production_web_pacsun_demandware_net__pacsun__products__default" class="full-unstyled-link">
     <span class="visually-hidden">Zelly Top</span>
     <div class="card card--product" tabindex="-1">
       <div class="card__inner"><div>
@@ -646,7 +639,6 @@ Item added to your cart</h2>
         </span>
       </dd>
     </div>
-    <small class="unit-price caption hidden">
       <dt class="visually-hidden">Unit price</dt>
       <dd>
         <span></span>
@@ -829,7 +821,6 @@ Item added to your cart</h2>
         </span>
       </dd>
     </div>
-    <small class="unit-price caption hidden">
       <dt class="visually-hidden">Unit price</dt>
       <dd>
         <span></span>
@@ -1063,10 +1054,9 @@ Item added to your cart</h2>
       <dd>
         <span class="price-item price-item--sale">
           $20
-        </span>
+        </span> 
       </dd>
     </div>
-    <small class="unit-price caption hidden">
       <dt class="visually-hidden">Unit price</dt>
       <dd>
         <span></span>
