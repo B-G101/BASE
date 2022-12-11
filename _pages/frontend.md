@@ -2,6 +2,7 @@
 layout: default
 title: Frontend Hacks
 permalink: /frontend/overview
+hide: true
 ---
 
 
